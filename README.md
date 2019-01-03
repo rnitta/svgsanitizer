@@ -4,7 +4,7 @@ SVG sanitizing tool developed in Golang.
 
 ## Sanitize SVG
 
-SVG like
+SVG file like this
 
 ```xml
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 488">
@@ -21,7 +21,7 @@ SVG like
 </svg>
 ```
 
-will convert to
+will be converted to
 
 ```xml
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 488">
@@ -61,5 +61,5 @@ generated /Users/~~~/svgsanitizer/sanitized_fuga.svg.
 
 There are much known bugs.
 
-- Panic will occur if invalid SVG (or any files other than SVG) path specified.
-- Convert `<style>` elements inpropery in particular case. 
+- Panic will occur if invalid SVG (or any files other than SVG) paths are specified.
+- Convert `<style>` elements improperly in particular case. 
