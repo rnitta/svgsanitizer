@@ -38,6 +38,8 @@ will be converted to
 </svg>
 ```
 
+by Replacing id/class attrs and Removing custom data attrs. 
+
 ## Usage
 
 ```bash
