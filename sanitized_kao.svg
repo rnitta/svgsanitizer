@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 488">
+  <defs>
+    <style>
+      .tNswYNsGRussVmaozFZB {
+        fill: rgba(255,255,255,0);
+      }
+
+      .tNswYNsGRussVmaozFZB, .sbOJiFQGZsnwTKSmVoiG {
+        stroke: #434343;
+        stroke-width: 10px;
+      }
+
+      .sbOJiFQGZsnwTKSmVoiG, .mBTvKSJfjzaLbtZsyMGe {
+        fill: none;
+      }
+
+      .uDtRzQMDQiYCOhgHOvgS {
+        fill: #434343;
+      }
+
+      .LOpbUOpEdKupdOMeRVja {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="XoEFfRsWxPLDnJObCsNV" transform="translate(-76 38)">
+    <g id="lgTeMaPEZQleQYhYzRyW" class="tNswYNsGRussVmaozFZB" transform="translate(76 -38)">
+      <circle class="LOpbUOpEdKupdOMeRVja RzLNTXYeUCWKsXbGyRAO" cx="244" cy="244" r="244"/>
+      <circle class="mBTvKSJfjzaLbtZsyMGe" cx="244" cy="244" r="239"/>
+    </g>
+    <path id="JjPjzpfRFEgmotaFetHs" class="sbOJiFQGZsnwTKSmVoiG" d="M76,206c53.75,74.034,108.329,0,108.329,0" transform="translate(190 87.855)"/>
+    <g id="bZRjxAwnwekrBEmfdzdc" transform="translate(-21)">
+      <circle id="EkXBAkjQZLCtTMtTCoaN" class="uDtRzQMDQiYCOhgHOvgS" cx="32.5" cy="32.5" r="32.5" transform="translate(235 104)"/>
+      <circle id="atyyiNKAReKJyiXJrscc" class="uDtRzQMDQiYCOhgHOvgS" cx="32.5" cy="32.5" r="32.5" transform="translate(383 104)"/>
+    </g>
+  </g>
+</svg>

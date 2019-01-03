@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 488">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: rgba(255,255,255,0);
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #434343;
+        stroke-width: 10px;
+      }
+
+      .cls-2, .cls-5 {
+        fill: none;
+      }
+
+      .cls-3 {
+        fill: #434343;
+      }
+
+      .cls-4 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="顔" transform="translate(-76 38)">
+    <g id="楕円形_1" data-name="楕円形 1" class="cls-1" transform="translate(76 -38)">
+      <circle class="cls-4 hoge" cx="244" cy="244" r="244"/>
+      <circle class="cls-5" cx="244" cy="244" r="239"/>
+    </g>
+    <path id="パス_1" data-name="パス 1" class="cls-2" d="M76,206c53.75,74.034,108.329,0,108.329,0" transform="translate(190 87.855)"/>
+    <g id="目" transform="translate(-21)">
+      <circle id="楕円形_3" data-name="楕円形 3" class="cls-3" cx="32.5" cy="32.5" r="32.5" transform="translate(235 104)"/>
+      <circle id="楕円形_4" data-name="楕円形 4" class="cls-3" cx="32.5" cy="32.5" r="32.5" transform="translate(383 104)"/>
+    </g>
+  </g>
+</svg>
