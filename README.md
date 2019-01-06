@@ -50,8 +50,9 @@ For example,
 
 ```bash
 $ ls *.svg | xargs svgsanitizer
-generated /Users/~~~/svgsanitizer/sanitized_hoge.svg.
-generated /Users/~~~/svgsanitizer/sanitized_fuga.svg.
+Generated. /path_to_svg/sanitized_hoge.svg
+Generated. /path_to_svg/sanitized_fuga.svg
+...
 ```
 
 
@@ -61,7 +62,6 @@ generated /Users/~~~/svgsanitizer/sanitized_fuga.svg.
 
 ## Bugs
 
-There are much known bugs.
+There are many known bugs.
 
 - Panic will occur if invalid SVG (or any files other than SVG) paths are specified.
-- Convert `<style>` elements improperly in particular case. 

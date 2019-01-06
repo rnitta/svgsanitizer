@@ -30,7 +30,7 @@ func convert(filepath string) {
 	rep := regexp.MustCompile(`(.+)/(.+?)`)
 	outputPath := rep.ReplaceAllString(filepath, "$1/sanitized_$2")
 	svg.WriteToFile(outputPath)
-	fmt.Printf("generated %s.\n", outputPath)
+	fmt.Printf("Generated. %s\n", outputPath)
 }
 
 func loadXML(filepath string) (svg *etree.Document){
@@ -70,7 +70,6 @@ func traverseAllElements(e etree.Element) (allElements []*etree.Element, ids []s
 					classesMap[className] = true
 					classes = append(classes, className)
 				}
-
 			}
 		}
 
@@ -109,11 +108,19 @@ func replaceWithMaps(doc *etree.Document, allElements []*etree.Element, idTable 
 }
 
 func replaceStyles(svg *etree.Document, idTable map[string]string, classTable map[string]string) {
-	//FIXME: 全置換してるのでCSSプロパティによっては逝く
+	//FIXME: 遅い
 	for _, styleElm := range svg.Element.FindElements("//style") {
-		innerText := styleElm.Text()
-		innerText = replaceTextWithTable(innerText, idTable, "#")
-		innerText = replaceTextWithTable(innerText, classTable, ".")
+		styleText := styleElm.Text()
+		reg := regexp.MustCompile(`([^{}]+?)({[^{}]+?})`)
+		matches := reg.FindAllStringSubmatch(styleText, -1)
+		innerText := ""
+		for _, match := range matches {
+			selector := match[1]
+			selector = replaceTextWithTable(selector, idTable, "#")
+			selector = replaceTextWithTable(selector, classTable, ".")
+			innerText += selector
+			innerText += match[2]
+		}
 		styleElm.SetText(innerText)
 	}
 }
