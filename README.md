@@ -64,4 +64,5 @@ Generated. /path_to_svg/sanitized_fuga.svg
 
 There are many known bugs.
 
+- critical: Map will not assure orders, so if there are `.class1` and `.class10`, replacing ids/classes may be done improperly.
 - Panic will occur if invalid SVG (or any files other than SVG) paths are specified.

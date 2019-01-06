@@ -3,6 +3,7 @@ package main
 import (
 	"flag"
 	"fmt"
+	"github.com/k0kubun/pp"
 	"math/rand"
 	"path/filepath"
 	"regexp"
@@ -101,7 +102,6 @@ func randString(n int) string {
 	return string(b)
 }
 
-
 func replaceWithMaps(doc *etree.Document, allElements []*etree.Element, idTable map[string]string, classTable map[string]string) {
 	replaceStyles(doc, idTable, classTable)
 	replaceAttrs(allElements, idTable, classTable)
@@ -119,8 +119,20 @@ func replaceStyles(svg *etree.Document, idTable map[string]string, classTable ma
 			selector = replaceTextWithTable(selector, idTable, "#")
 			selector = replaceTextWithTable(selector, classTable, ".")
 			innerText += selector
-			innerText += match[2]
+
+			// svgはurlでセレクタ使えるため
+			properties := match[2]
+			urlReg := regexp.MustCompile(`url\s*\(#(.+?)\)`)
+			urlMatches := urlReg.FindAllStringSubmatch(properties, -1)
+			for _, urlMatch := range urlMatches {
+				properties = strings.Replace(properties, urlMatch[0], fmt.Sprintf("url(#%s)", idTable[urlMatch[1]]), 1)
+			}
+
+			innerText += properties
 		}
+
+		pp.Print(classTable)
+		pp.Print(idTable)
 		styleElm.SetText(innerText)
 	}
 }
