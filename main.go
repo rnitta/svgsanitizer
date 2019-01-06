@@ -3,7 +3,6 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/k0kubun/pp"
 	"math/rand"
 	"path/filepath"
 	"regexp"
@@ -131,8 +130,6 @@ func replaceStyles(svg *etree.Document, idTable map[string]string, classTable ma
 			innerText += properties
 		}
 
-		pp.Print(classTable)
-		pp.Print(idTable)
 		styleElm.SetText(innerText)
 	}
 }
